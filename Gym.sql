@@ -38,29 +38,35 @@ CREATE TABLE Trainers (
     Specialization NVARCHAR(100)
 );
 
-CREATE TABLE Classes (
-    ClassID INT PRIMARY KEY IDENTITY(1,1),
-    ClassName NVARCHAR(100) NOT NULL,
-    Description NVARCHAR(MAX),
-    TrainerID INT FOREIGN KEY REFERENCES Trainers(TrainerID),
-    Capacity INT NOT NULL,
-    Duration INT NOT NULL -- in minutes
-);
+--CREATE TABLE Classes (
+--    ClassID INT PRIMARY KEY IDENTITY(1,1),
+--    ClassName NVARCHAR(100) NOT NULL,
+--    Description NVARCHAR(MAX),
+--    TrainerID INT FOREIGN KEY REFERENCES Trainers(TrainerID),
+--    Capacity INT NOT NULL,
+--    Duration INT NOT NULL -- in minutes
+--);
 
-CREATE TABLE ClassSchedule (
-    ScheduleID INT PRIMARY KEY IDENTITY(1,1),
-    ClassID INT FOREIGN KEY REFERENCES Classes(ClassID),
-    DayOfWeek INT NOT NULL, -- 1 = Sunday, 2 = Monday, etc.
-    StartTime TIME NOT NULL,
-    EndTime TIME NOT NULL
-);
+--CREATE TABLE ClassSchedule (
+--    ScheduleID INT PRIMARY KEY IDENTITY(1,1),
+--	MemberID INT FOREIGN KEY REFERENCES Members(MemberID),
+--	TrainerID INT FOREIGN KEY REFERENCES Trainers(TrainerID),
+--    --ClassID INT FOREIGN KEY REFERENCES Classes(ClassID),
+--    DayOfWeek INT NOT NULL, -- 1 = Sunday, 2 = Monday, etc.
+--    StartTime TIME NOT NULL,
+--    EndTime TIME NOT NULL
+--);
 
 
-CREATE TABLE ClassBookings (
+CREATE TABLE TrainerBookings (
     BookingID INT PRIMARY KEY IDENTITY(1,1),
     MemberID INT FOREIGN KEY REFERENCES Members(MemberID),
-    ScheduleID INT FOREIGN KEY REFERENCES ClassSchedule(ScheduleID),
-    BookingDate DATE NOT NULL
+	TrainerID INT FOREIGN KEY REFERENCES Trainers(TrainerID),
+    --ScheduleID INT FOREIGN KEY REFERENCES ClassSchedule(ScheduleID),
+	DayOfWeek INT NOT NULL, -- 1 = Sunday, 2 = Monday, etc.
+    StartTime TIME NOT NULL,
+    EndTime TIME NOT NULL
+    --BookingDate DATE NOT NULL
 );
 
 
