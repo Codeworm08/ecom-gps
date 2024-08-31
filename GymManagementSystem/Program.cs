@@ -8,6 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<GymManagementSystemContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("GymManagementSystemContext")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers().AddJsonOptions(
+
+    options => {
+        { options.JsonSerializerOptions.PropertyNamingPolicy = null; }
+        { options.JsonSerializerOptions.DictionaryKeyPolicy = null; }
+    }
+
+);
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddCors();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -20,6 +30,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(options => { options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader(); });
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
