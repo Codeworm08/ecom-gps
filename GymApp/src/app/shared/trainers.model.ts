@@ -4,5 +4,5 @@ export class Trainers {
     LastName;
     Email;
     Phone;
-    Specialization
+    Specialization;
 }
