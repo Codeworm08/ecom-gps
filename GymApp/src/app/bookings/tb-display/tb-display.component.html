@@ -1,0 +1,26 @@
+<table class="table-hover table-warning">
+    <thead>
+        <tr>            
+            <th>BookingId</th>
+            <th>Member</th>
+            <th>Trainer</th>
+            <th>Day Of Week</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of srvM.tList">
+            <td (click)="fillForm(m)" >{{m.BookingId}}</td>
+            <td (click)="fillForm(m)">{{m.MemberId}}</td>
+            <td (click)="fillForm(m)">{{m.TrainerId}}</td>
+            <td (click)="fillForm(m)">{{m.DayOfWeek}}</td>
+            <td (click)="fillForm(m)">{{m.StartTime}}</td>
+            <td (click)="fillForm(m)">{{m.EndTime}}</td>
+            
+            <td (click)="fillForm(m)"><button class="btn btn-lg btn-danger text-white" (click)="onDelete(m.BookingId)"><i class="bi bi-trash3"></i> Delete</button></td>
+        </tr>
+    </tbody>
+</table> 

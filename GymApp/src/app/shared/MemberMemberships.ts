@@ -1,31 +1,34 @@
 import { Injectable } from '@angular/core';
-import { MemberMembership } from './member-membership.model';
+
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+
+import { Membermembership } from './membermembership.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MemberMembershipsService {
-  mData: MemberMembership = new MemberMembership();
-  mList: MemberMembership[];
+  mData: Membermembership = new Membermembership();
+  mList: Membermembership[];
   readonly mApiUrl = "https://localhost:44358/api/MemberMemberships";
-
+  
   constructor(private objHttp: HttpClient) {}
 
-  getMemberMembershipList(): Observable<MemberMembership[]> {
-    return this.objHttp.get<MemberMembership[]>(this.mApiUrl);
+
+
+  getMemberMembershipList(){
+    this.objHttp.get(this.mApiUrl).toPromise().then(res=>this.mList=res as Membermembership[]);
   }
 
-  postMemberMembership(): Observable<MemberMembership> {
-    return this.objHttp.post<MemberMembership>(this.mApiUrl, this.mData);
+  postMemberMembership(){
+    return this.objHttp.post(this.mApiUrl, this.mData);
   }
 
-  deleteMemberMembership(id: number): Observable<void> {
-    return this.objHttp.delete<void>(${this.mApiUrl}/${id});
+  deleteMemberMembership(id: number){
+    return this.objHttp.delete(this.mApiUrl+id);
   }
 
-  putMemberMembership(): Observable<MemberMembership> {
-    return this.objHttp.put<MemberMembership>(${this.mApiUrl}/${this.mData.MemberMembershipID}, this.mData);
+  putMemberMembership(){
+    return this.objHttp.put(this.mApiUrl+"/"+this.mData.MemberMembershipId, this.mData);
   }
 }

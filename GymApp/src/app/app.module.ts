@@ -15,6 +15,8 @@ import { TrainerRegisterComponent } from './trainers/trainer-register/trainer-re
 import { TrainerDisplayComponent } from './trainers/trainer-display/trainer-display.component';
 import { MshDisplayComponent } from './membermemberships/msh-display/msh-display.component';
 import { MshRegisterComponent } from './membermemberships/msh-register/msh-register.component';
+import { TbRegisterComponent } from './bookings/tb-register/tb-register.component';
+import { TbDisplayComponent } from './bookings/tb-display/tb-display.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MshRegisterComponent } from './membermemberships/msh-register/msh-regis
     TrainerDisplayComponent,
     TrainerRegisterComponent,
     MshDisplayComponent,
-    MshRegisterComponent
+    MshRegisterComponent,
+    TbRegisterComponent,
+    TbDisplayComponent
   ],
   imports: [
     BrowserModule,

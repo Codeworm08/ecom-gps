@@ -1,1 +1,22 @@
-<p>msh-display works!</p>
+<table class="table-hover table-warning">
+    <thead>
+        <tr>                        
+            <th>Member Id</th>
+            <th>Membership Id</th>
+            <th>Start Date</th>            
+            <th>End Date</th>
+            
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of srvM.mList">
+            <td (click)="fillForm(m)" >{{m.MemberId}}</td>
+            <td (click)="fillForm(m)">{{m.MembershipId}}</td>
+            <td (click)="fillForm(m)">{{m.StartDate}}</td>
+            <td (click)="fillForm(m)">{{m.EndDate}}</td>
+            
+            <td (click)="fillForm(m)"><button class="btn btn-lg btn-danger text-white" (click)="onDelete(m.MemberMembershipId)"><i class="bi bi-trash3"></i> Delete</button></td>
+        </tr>
+    </tbody>
+</table> 

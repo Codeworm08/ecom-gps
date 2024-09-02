@@ -1,6 +1,7 @@
 <table class="table-hover table-warning">
     <thead>
-        <tr>            
+        <tr>
+            <th>Membership Id</th>            
             <th>Membership Type</th>
             <th>Duration</th>
             <th>Price</th>            
@@ -9,6 +10,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let m of srvM.memList">
+            <td (click)="fillForm(m)" >{{m.MembershipId}}</td>
             <td (click)="fillForm(m)" >{{m.MembershipType}}</td>
             <td (click)="fillForm(m)">{{m.Duration}}</td>
             <td (click)="fillForm(m)">{{m.Price}}</td>            
