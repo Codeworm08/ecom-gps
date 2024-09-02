@@ -4,7 +4,7 @@ import { EquipmentService } from '../../shared/equipment.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-equip-register',
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { EquipmentService } from '../../shared/equipment.service';
 
 @Component({
-  selector: 'app-display',
+  selector: 'app-equip-display',
   templateUrl: './display.component.html',
   styleUrl: './display.component.css'
 })
