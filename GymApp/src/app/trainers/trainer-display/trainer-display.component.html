@@ -1,0 +1,24 @@
+<table class="table-hover table-warning">
+    <thead>
+        <tr>
+            <th>Trainer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Specialization</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of srvE.traList">
+            <td (click)="fillForm(e)" >{{e.TrainerId}}</td>
+            <td (click)="fillForm(e)">{{e.FirstName}}</td>
+            <td (click)="fillForm(e)">{{e.LastName}}</td>
+            <td (click)="fillForm(e)">{{e.Email}}</td>
+            <td (click)="fillForm(e)">{{e.Phone}}</td>
+            <td (click)="fillForm(e)">{{e.Specialization}}</td>
+            <td (click)="fillForm(e)"><button class="btn btn-lg btn-danger text-white" (click)="onDelete(e.TrainerId)"><i class="bi bi-trash3"></i> Delete</button></td>
+        </tr>
+    </tbody>
+</table> 

@@ -3,10 +3,10 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-person-lines-fill" [class.green-icon]="EquipmentName.valid" [class.red-icon]="EquipmentName.invalid"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-person-lines-fill p-1" [class.green-icon]="EquipmentName.valid" [class.red-icon]="EquipmentName.invalid"></i>
                     <input name="EquipmentName" #EquipmentName="ngModel" [(ngModel)]="objSrv.eData.EquipmentName"
-                    placeholder="Equipment Name" class="form-control" required minlength="3" maxlength="50">
+                    placeholder="Equipment Name" class="form-control m-1 " required minlength="3" maxlength="50">
                 </div>
             </div>
         </div>
@@ -14,10 +14,10 @@
     <div class="form-group">    
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-123" [class.green-icon]="Description.valid" [class.red-icon]="Description.invalid && Description.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-123 p-1" [class.green-icon]="Description.valid" [class.red-icon]="Description.invalid && Description.touched"></i>
                     <input name="Description" #Description="ngModel" [(ngModel)]="objSrv.eData.Description"
-                    placeholder="Equipment Description" class="form-control" required>
+                    placeholder="Equipment Description" class="form-control m-1"quired>
                 </div>
             </div>
         </div>
@@ -25,10 +25,10 @@
     <div class="form-group">    
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-award" [class.green-icon]="PurchaseDate.valid" [class.red-icon]="PurchaseDate.invalid &&PurchaseDate.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-award p-1" [class.green-icon]="PurchaseDate.valid" [class.red-icon]="PurchaseDate.invalid &&PurchaseDate.touched"></i>
                     <input name="PurchaseDate" #PurchaseDate="ngModel" [(ngModel)]="objSrv.eData.PurchaseDate"
-                    placeholder="Equipment Purchase Date" class="form-control" required minlength="3">
+                    placeholder="Purchase Date" class="form-control m-1"quired minlength="3">
                 </div>
             </div>
         </div>
@@ -36,13 +36,13 @@
     <div class="form-group">    
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-cash-stack" [class.green-icon]="LastMaintenanceDate.valid" [class.red-icon]="LastMaintenanceDate.invalid && LastMaintenanceDate.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-cash-stack p-1" [class.green-icon]="LastMaintenanceDate.valid" [class.red-icon]="LastMaintenanceDate.invalid && LastMaintenanceDate.touched"></i>
                     <input name="LastMaintenanceDate" #LastMaintenanceDate="ngModel" [(ngModel)]="objSrv.eData.LastMaintenanceDate"
-                    placeholder="Last Maintenance Date of Equipment" class="form-control" required minlength="5">
+                    placeholder="Last Maintenance Date" class="form-control m-1"quired minlength="5">
                 </div>
             </div>
         </div>
     </div>
-    <button class="btn btn-success btn-lg" type="submit" [disabled]="form.invalid"><i class="bi bi-database-fill-up green-icon"></i>Add Equipment</button>
+    <button class="btn btn-success m-2 btn-lg" type="submit" [disabled]="form.invalid"><i class="bi bi-database-fill-up green-icon m-3"></i>Add Equipment</button>
 </form>

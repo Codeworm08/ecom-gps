@@ -9,6 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MemDisplayComponent } from './members/display/display.component';
 import { MemRegisterComponent } from './members/register/register.component';
+import { MembershipdisplayComponent } from './memberships/membershipdisplay/membershipdisplay.component';
+import { MembershipregisterComponent } from './memberships/membershipregister/membershipregister.component';
+import { TrainerRegisterComponent } from './trainers/trainer-register/trainer-register.component';
+import { TrainerDisplayComponent } from './trainers/trainer-display/trainer-display.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { MemRegisterComponent } from './members/register/register.component';
     RegisterComponent,
     DisplayComponent,
     MemDisplayComponent,
-    MemRegisterComponent
+    MemRegisterComponent,
+    MembershipdisplayComponent,
+    MembershipregisterComponent,
+    TrainerDisplayComponent,
+    TrainerRegisterComponent
   ],
   imports: [
     BrowserModule,
