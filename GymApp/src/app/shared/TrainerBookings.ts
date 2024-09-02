@@ -1,31 +1,32 @@
 import { Injectable } from '@angular/core';
-import { TrainerBooking } from './trainer-booking.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Trainerbookings } from './trainerbooking.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TrainerBookingsService {
-  tData: TrainerBooking = new TrainerBooking();
-  tList: TrainerBooking[];
+  tData: Trainerbookings = new Trainerbookings();
+  tList: Trainerbookings[];
   readonly tApiUrl = "https://localhost:44358/api/TrainerBookings";
 
   constructor(private objHttp: HttpClient) {}
 
-  getTrainerBookingList(): Observable<TrainerBooking[]> {
-    return this.objHttp.get<TrainerBooking[]>(this.tApiUrl);
+  getTrainerBookingList(){
+    return this.objHttp.get(this.tApiUrl).toPromise().then(res=>this.tList=res as Trainerbookings[]);
   }
 
-  postTrainerBooking(): Observable<TrainerBooking> {
-    return this.objHttp.post<TrainerBooking>(this.tApiUrl, this.tData);
+  postTrainerBooking(){
+    return this.objHttp.post(this.tApiUrl, this.tData);
   }
 
-  deleteTrainerBooking(id: number): Observable<void> {
-    return this.objHttp.delete<void>(${this.tApiUrl}/${id});
+  deleteTrainerBooking(id: number){
+    return this.objHttp.delete(this.tApiUrl+"/"
+      +id);
   }
 
-  putTrainerBooking(): Observable<TrainerBooking> {
-    return this.objHttp.put<TrainerBooking>(${this.tApiUrl}/${this.tData.BookingID}, this.tData);
+  putTrainerBooking(){
+    return this.objHttp.put(this.tApiUrl+"/"+this.tData.BookingId, this.tData);
   }
 }
