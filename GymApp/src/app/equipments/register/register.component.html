@@ -4,7 +4,7 @@
         <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text bg-white m-1">
-                    <i class="bi bi-person-lines-fill p-1" [class.green-icon]="EquipmentName.valid" [class.red-icon]="EquipmentName.invalid"></i>
+                    <i class="bi bi-tools p-1" [class.green-icon]="EquipmentName.valid" [class.red-icon]="EquipmentName.invalid"></i>
                     <input name="EquipmentName" #EquipmentName="ngModel" [(ngModel)]="objSrv.eData.EquipmentName"
                     placeholder="Equipment Name" class="form-control m-1 " required minlength="3" maxlength="50">
                 </div>
@@ -15,7 +15,7 @@
         <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text bg-white m-1">
-                    <i class="bi bi-123 p-1" [class.green-icon]="Description.valid" [class.red-icon]="Description.invalid && Description.touched"></i>
+                    <i class="bi bi-file-text p-1" [class.green-icon]="Description.valid" [class.red-icon]="Description.invalid && Description.touched"></i>
                     <input name="Description" #Description="ngModel" [(ngModel)]="objSrv.eData.Description"
                     placeholder="Equipment Description" class="form-control m-1"quired>
                 </div>
@@ -26,7 +26,7 @@
         <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text bg-white m-1">
-                    <i class="bi bi-award p-1" [class.green-icon]="PurchaseDate.valid" [class.red-icon]="PurchaseDate.invalid &&PurchaseDate.touched"></i>
+                    <i class="bi bi-calendar-event p-1" [class.green-icon]="PurchaseDate.valid" [class.red-icon]="PurchaseDate.invalid &&PurchaseDate.touched"></i>
                     <input name="PurchaseDate" #PurchaseDate="ngModel" [(ngModel)]="objSrv.eData.PurchaseDate"
                     placeholder="Purchase Date" class="form-control m-1"quired minlength="3">
                 </div>
@@ -37,8 +37,8 @@
         <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text bg-white m-1">
-                    <i class="bi bi-cash-stack p-1" [class.green-icon]="LastMaintenanceDate.valid" [class.red-icon]="LastMaintenanceDate.invalid && LastMaintenanceDate.touched"></i>
-                    <input name="LastMaintenanceDate" #LastMaintenanceDate="ngModel" [(ngModel)]="objSrv.eData.LastMaintenanceDate"
+                    <i class="bi bi-calendar2-check p-1" [class.green-icon]="LastMaintenanceDate.valid" [class.red-icon]="LastMaintenanceDate.invalid && LastMaintenanceDate.touched"></i>
+                    <input type="date" name="LastMaintenanceDate" #LastMaintenanceDate="ngModel" [(ngModel)]="objSrv.eData.LastMaintenanceDate"
                     placeholder="Last Maintenance Date" class="form-control m-1"quired minlength="5">
                 </div>
             </div>

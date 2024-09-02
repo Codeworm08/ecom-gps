@@ -3,10 +3,10 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-person-lines-fill" [class.green-icon]="MembershipType.valid" [class.red-icon]="MembershipType.invalid && MembershipType.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-people p-1" [class.green-icon]="MembershipType.valid" [class.red-icon]="MembershipType.invalid && MembershipType.touched"></i>
                     <input name="MembershipType" #MembershipType="ngModel" [(ngModel)]="objSrv.mbData.MembershipType"
-                    placeholder="MembershipType" class="form-control" required minlength="1" maxlength="50">
+                    placeholder="MembershipType" class="form-control m-1" required minlength="1" maxlength="50">
                 </div>
             </div>
         </div>
@@ -14,9 +14,9 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <label for="Duration">Duration</label>
-                    <input type="number"  name="Duration" #Duration="ngModel" [(ngModel)]="objSrv.mbData.Duration" class="form-control"
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-clock p-1"></i>
+                    <input type="number"  name="Duration" #Duration="ngModel" [(ngModel)]="objSrv.mbData.Duration" class="form-control m-1" placeholder="Duration"
                      required min="1">
                 </div>
             </div>
@@ -25,9 +25,9 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <label for="Price">Price</label>
-                    <input type="number"  name="Price" #Price="ngModel" [(ngModel)]="objSrv.mbData.Price" class="form-control"
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-cash-stack p-1"></i>
+                    <input type="number"  name="Price" #Price="ngModel" [(ngModel)]="objSrv.mbData.Price" class="form-control m-1" placeholder="Price"
                      required min="1">
                 </div>
             </div>
@@ -36,5 +36,5 @@
     
     
     
-    <button class="btn btn-success btn-lg" type="submit" [disabled]="form.invalid"><i class="bi bi-database-fill-up green-icon"></i>Add Membership</button>
+    <button class="btn btn-success m-2 btn-lg" type="submit" [disabled]="form.invalid"><i class="bi bi-database-fill-up green-icon m-3"></i>Add Membership</button>
 </form>

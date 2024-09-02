@@ -1,22 +1,22 @@
 <table class="table-hover table-warning">
     <thead>
         <tr>
-            <th class="m-2">Equipment ID</th>
-            <th class="p-2">Equipment Name</th>
-            <th class="p-2">Description</th>
-            <th class="p-2">Purchase Date</th>
-            <th class="p-2">Last Maintenance Date</th>
-            <th>Delete</th>
+            <th class="p-2 text-center">Equipment ID</th>
+            <th class="p-2 text-center">Equipment Name</th>
+            <th class="p-2 text-center">Description</th>
+            <th class="p-2 text-center">Purchase Date</th>
+            <th class="p-2 text-center">Last Maintenance Date</th>
+            <th class="text-center">Delete</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let e of srvE.eList">
-            <td class="m-2" (click)="fillForm(e)" >{{e.EquipmentId}}</td>
-            <td class="p-2" (click)="fillForm(e)">{{e.EquipmentName}}</td>
-            <td class="p-2" (click)="fillForm(e)">{{e.Description}}</td>
-            <td class="p-2" (click)="fillForm(e)">{{e.PurchaseDate}}</td>
-            <td class="p-2" (click)="fillForm(e)">{{e.LastMaintenanceDate}}</td>
-            <td (click)="fillForm(e)"><button class="btn btn-lg btn-danger text-white" (click)="onDelete(e.EquipmentId)"><i class="bi bi-trash3"></i> Delete</button></td>
+            <td class="p-2 text-center" (click)="fillForm(e)" >{{e.EquipmentId}}</td>
+            <td class="p-2 text-center" (click)="fillForm(e)">{{e.EquipmentName}}</td>
+            <td class="p-2 text-center" (click)="fillForm(e)">{{e.Description}}</td>
+            <td class="p-2 text-center" (click)="fillForm(e)">{{e.PurchaseDate}}</td>
+            <td class="p-2 text-center" (click)="fillForm(e)">{{e.LastMaintenanceDate}}</td>
+            <td class="text-center" (click)="fillForm(e)"><button class="btn btn-sm btn-danger text-white" (click)="onDelete(e.EquipmentId)"><i class="bi bi-trash3"></i> Delete</button></td>
         </tr>
     </tbody>
 </table> 

@@ -3,10 +3,10 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-person-lines-fill" [class.green-icon]="FirstName.valid" [class.red-icon]="FirstName.invalid"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-person-lines-fill p-1" [class.green-icon]="FirstName.valid" [class.red-icon]="FirstName.invalid"></i>
                     <input name="FirstName" #FirstName="ngModel" [(ngModel)]="objSrv.traData.FirstName"
-                    placeholder="First Name" class="form-control" required minlength="3" maxlength="50">
+                    placeholder="First Name" class="form-control m-1" required minlength="3" maxlength="50">
                 </div>
             </div>
         </div>
@@ -14,10 +14,10 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-person-lines-fill" [class.green-icon]="LastName.valid" [class.red-icon]="LastName.invalid"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-person p-1" [class.green-icon]="LastName.valid" [class.red-icon]="LastName.invalid"></i>
                     <input name="LastName" #LastName="ngModel" [(ngModel)]="objSrv.traData.LastName"
-                    placeholder="Last Name" class="form-control" required minlength="3" maxlength="50">
+                    placeholder="Last Name" class="form-control m-1" required minlength="3" maxlength="50">
                 </div>
             </div>
         </div>
@@ -25,10 +25,10 @@
     <div class="form-group">    
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-123" [class.green-icon]="Email.valid" [class.red-icon]="Email.invalid && Email.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-envelope-at p-1" [class.green-icon]="Email.valid" [class.red-icon]="Email.invalid && Email.touched"></i>
                     <input name="Email" #Email="ngModel" [(ngModel)]="objSrv.traData.Email"
-                    placeholder="Email" class="form-control" required>
+                    placeholder="Email" class="form-control m-1" required>
                 </div>
             </div>
         </div>
@@ -36,10 +36,10 @@
     <div class="form-group">    
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-award" [class.green-icon]="Phone.valid" [class.red-icon]="Phone.invalid &&Phone.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-phone p-1" [class.green-icon]="Phone.valid" [class.red-icon]="Phone.invalid &&Phone.touched"></i>
                     <input name="Phone" #Phone="ngModel" [(ngModel)]="objSrv.traData.Phone"
-                    placeholder="Phone" class="form-control" required length="10">
+                    placeholder="Phone" class="form-control m-1" required length="10">
                 </div>
             </div>
         </div>
@@ -47,13 +47,13 @@
     <div class="form-group">    
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-cash-stack" [class.green-icon]="Specialization.valid" [class.red-icon]="Specialization.invalid && Specialization.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-award p-1" [class.green-icon]="Specialization.valid" [class.red-icon]="Specialization.invalid && Specialization.touched"></i>
                     <input name="Specialization" #Specialization="ngModel" [(ngModel)]="objSrv.traData.Specialization"
-                    placeholder="Specialization" class="form-control" required minlength="5">
+                    placeholder="Specialization" class="form-control m-1" required minlength="5">
                 </div>
             </div>
         </div>
     </div>
-    <button class="btn btn-success btn-lg" type="submit" [disabled]="form.invalid"><i class="bi bi-database-fill-up green-icon"></i>Add Trainer</button>
+    <button class="btn btn-success m-2 btn-lg" type="submit" [disabled]="form.invalid"><i class="bi bi-database-fill-up green-icon m-3"></i>Add Trainer</button>
 </form>
