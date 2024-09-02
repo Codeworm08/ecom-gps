@@ -13,6 +13,8 @@ import { MembershipdisplayComponent } from './memberships/membershipdisplay/memb
 import { MembershipregisterComponent } from './memberships/membershipregister/membershipregister.component';
 import { TrainerRegisterComponent } from './trainers/trainer-register/trainer-register.component';
 import { TrainerDisplayComponent } from './trainers/trainer-display/trainer-display.component';
+import { MshDisplayComponent } from './membermemberships/msh-display/msh-display.component';
+import { MshRegisterComponent } from './membermemberships/msh-register/msh-register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { TrainerDisplayComponent } from './trainers/trainer-display/trainer-disp
     MembershipdisplayComponent,
     MembershipregisterComponent,
     TrainerDisplayComponent,
-    TrainerRegisterComponent
+    TrainerRegisterComponent,
+    MshDisplayComponent,
+    MshRegisterComponent
   ],
   imports: [
     BrowserModule,
