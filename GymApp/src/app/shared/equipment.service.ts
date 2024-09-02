@@ -24,6 +24,6 @@ export class EquipmentService {
   }
   putEquipment()
   {
-    return this.objHttp.put(this.eApiUrl+"/"+this.eData.EquipmentId,this.eData.EquipmentId);
+    return this.objHttp.put(this.eApiUrl+"/"+this.eData.EquipmentId,this.eData);
   }
 }

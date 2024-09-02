@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../Day12/passport-app"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../GymManagementSystem"
+		},
+		{
+			"path": "../../../Day12/PassportAPI/PassportAPI"
+		}
+	],
+	"settings": {}
+}
