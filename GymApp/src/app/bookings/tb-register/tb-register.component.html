@@ -40,8 +40,8 @@
             <div class="input-group-prepend">
                 <div class="input-group-text bg-white">
                     <i class="bi bi-person-lines-fill" [class.green-icon]="StartTime.valid" [class.red-icon]="StartTime.invalid && StartTime.touched"></i>
-                    <input  type="time"name="StartTime" #StartTime="ngModel" [(ngModel)]="objSrv.tData.StartTime"
-                    placeholder="Start Time" class="form-control" required>
+                    <input   name="StartTime" #StartTime="ngModel" [(ngModel)]="objSrv.tData.StartTime"
+                    placeholder="Start Time (HH:MM:SS)" class="form-control" required>
                 </div>
             </div>
         </div>
@@ -51,8 +51,8 @@
             <div class="input-group-prepend">
                 <div class="input-group-text bg-white">
                     <i class="bi bi-person-lines-fill" [class.green-icon]="EndTime.valid" [class.red-icon]="EndTime.invalid && EndTime.touched"></i>
-                    <input  type="time" name="EndTime" #EndTime="ngModel" [(ngModel)]="objSrv.tData.EndTime"
-                    placeholder="End Time" class="form-control" required>
+                    <input   name="EndTime" #EndTime="ngModel" [(ngModel)]="objSrv.tData.EndTime"
+                    placeholder="End Time (HH:MM:SS)" class="form-control" required>
                 </div>
             </div>
         </div>
