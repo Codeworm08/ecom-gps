@@ -11,19 +11,19 @@ export class MembersService {
   memList: Members[];
   readonly memApiUrl="https://localhost:44358/api/Members";
   constructor(private objHttp:HttpClient) { }
-  getEquipmentList()
+  getMembersList()
   {
     this.objHttp.get(this.memApiUrl).toPromise().then(res=>this.memList=res as Members[]);
   }
-  postEquipment()
+  postMember()
   {
     return this.objHttp.post(this.memApiUrl,this.memData);
   }
-  deleteEquipment(id)
+  deleteMember(id)
   {
     return this.objHttp.delete(this.memApiUrl+"/"+id);
   }
-  putEquipment()
+  putMember()
   {
     return this.objHttp.put(this.memApiUrl+"/"+this.memData.MemberId,this.memData);
   }

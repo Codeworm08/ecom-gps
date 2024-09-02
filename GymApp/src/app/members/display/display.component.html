@@ -1,1 +1,26 @@
-<p>display works!</p>
+<table class="table-hover table-warning">
+    <thead>
+        <tr>            
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Date Of Birth</th>
+            <th>Joining Date</th>
+            <th>Membership Status</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of srvM.memList">
+            <td (click)="fillForm(m)" >{{m.FirstName}}</td>
+            <td (click)="fillForm(m)">{{m.LastName}}</td>
+            <td (click)="fillForm(m)">{{m.Email}}</td>
+            <td (click)="fillForm(m)">{{m.Phone}}</td>
+            <td (click)="fillForm(m)">{{m.DateOfBirth}}</td>
+            <td (click)="fillForm(m)">{{m.JoinDate}}</td>
+            <td (click)="fillForm(m)">{{m.MembershipStatus}}</td>
+            <td (click)="fillForm(m)"><button class="btn btn-lg btn-danger text-white" (click)="onDelete(m.MemberId)"><i class="bi bi-trash3"></i> Delete</button></td>
+        </tr>
+    </tbody>
+</table> 

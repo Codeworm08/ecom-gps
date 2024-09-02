@@ -7,12 +7,17 @@ import { DisplayComponent } from './equipments/display/display.component';
 import { RegisterComponent } from './equipments/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MemDisplayComponent } from './members/display/display.component';
+import { MemRegisterComponent } from './members/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayComponent,
-    RegisterComponent
+    RegisterComponent,
+    DisplayComponent,
+    MemDisplayComponent,
+    MemRegisterComponent
   ],
   imports: [
     BrowserModule,

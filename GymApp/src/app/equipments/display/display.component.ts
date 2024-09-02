@@ -18,11 +18,11 @@ export class DisplayComponent {
   }
   onDelete(eid)
   {
-    if(confirm('Are you sure you want to delete this Passport Record?'))
+    if(confirm('Are you sure you want to delete this Equipment Record?'))
     {
       this.srvE.deleteEquipment(eid).subscribe(
         res=>{
-          alert("Passport Record Deleted!!");
+          alert("Equipment Record Deleted!!");
           this.srvE.getEquipmentList();
         },
         err=>{
