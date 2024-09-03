@@ -27,7 +27,7 @@
             <div class="input-group-prepend">
                 <div class="input-group-text bg-white m-1">
                     <i class="bi bi-calendar-event p-1" [class.green-icon]="PurchaseDate.valid" [class.red-icon]="PurchaseDate.invalid &&PurchaseDate.touched"></i>
-                    <input name="PurchaseDate" #PurchaseDate="ngModel" [(ngModel)]="objSrv.eData.PurchaseDate"
+                    <input type="date" name="PurchaseDate" #PurchaseDate="ngModel" [(ngModel)]="objSrv.eData.PurchaseDate"
                     placeholder="Purchase Date" class="form-control m-1"quired minlength="3">
                 </div>
             </div>
