@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../../../Day12/PassportAPI/PassportAPI"
+		},
+		{
+			"path": "../../../Day-10/dir-app"
 		}
 	],
 	"settings": {}
