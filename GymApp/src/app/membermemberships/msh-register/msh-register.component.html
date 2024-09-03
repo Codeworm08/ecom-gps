@@ -3,11 +3,11 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-person-lines-fill" [class.green-icon]="MemberId.valid" [class.red-icon]="MemberId.invalid && MemberId.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-file-person p-1" [class.green-icon]="MemberId.valid" [class.red-icon]="MemberId.invalid && MemberId.touched"></i>
                     <label for="MemberId">Enter Member Id</label>
                     <input type="number" name="MemberId" #MemberId="ngModel" [(ngModel)]="objSrv.mData.MemberId"
-                    placeholder="0" class="form-control" required>
+                    placeholder="0" class="form-control m-1" required>
                 </div>
             </div>
         </div>
@@ -15,11 +15,11 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-person-lines-fill" [class.green-icon]="MembershipId.valid" [class.red-icon]="MembershipId.invalid && MembershipId.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-diagram-3 p-1" [class.green-icon]="MembershipId.valid" [class.red-icon]="MembershipId.invalid && MembershipId.touched"></i>
                     <label for="MembershipId">Enter Membership Id</label>
                     <input type="number" name="MembershipId" #MembershipId="ngModel" [(ngModel)]="objSrv.mData.MembershipId"
-                    placeholder="0" class="form-control" required>
+                    placeholder="0" class="form-control m-1" required>
                 </div>
             </div>
         </div>
@@ -28,10 +28,10 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-person-lines-fill" [class.green-icon]="StartDate.valid" [class.red-icon]="StartDate.invalid && StartDate.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-hourglass-top p-1" [class.green-icon]="StartDate.valid" [class.red-icon]="StartDate.invalid && StartDate.touched"></i>
                     <input type="date"  name="StartDate" #StartDate="ngModel" [(ngModel)]="objSrv.mData.StartDate"
-                    placeholder="Start Date" class="form-control" required>
+                    placeholder="Start Date" class="form-control m-1" required>
                 </div>
             </div>
         </div>
@@ -39,10 +39,10 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <div class="input-group-text bg-white">
-                    <i class="bi bi-person-lines-fill" [class.green-icon]="EndDate.valid" [class.red-icon]="EndDate.invalid && EndDate.touched"></i>
+                <div class="input-group-text bg-white m-1">
+                    <i class="bi bi-hourglass-bottom p-1" [class.green-icon]="EndDate.valid" [class.red-icon]="EndDate.invalid && EndDate.touched"></i>
                     <input type="date"  name="EndDate" #EndDate="ngModel" [(ngModel)]="objSrv.mData.EndDate"
-                    placeholder="End Date" class="form-control" required minlength="10" maxlength="50">
+                    placeholder="End Date" class="form-control m-1" required minlength="10" maxlength="50">
                 </div>
             </div>
         </div>
@@ -51,5 +51,5 @@
      
     
     
-    <button class="btn btn-success btn-lg" type="submit" [disabled]="form.invalid"><i class="bi bi-database-fill-up green-icon"></i>Add Member's Membership</button>
+    <button class="btn btn-success btn-lg m-3" type="submit" [disabled]="form.invalid"><i class="bi bi-database-fill-up green-icon"></i>Add Member's Membership</button>
 </form>
